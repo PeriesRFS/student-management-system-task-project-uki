@@ -54,7 +54,7 @@ body{
 }
 
 /* RIGHT-Panel */
-.right-Panel {
+.right-panel {
     background: white;
     padding: 20px;
     border-radius: 10px;
@@ -82,7 +82,7 @@ button{
     border: none ;
     border-radius: 6px;
     cursor: pointer;
-    
+
 }
 
 button:hover {
@@ -108,7 +108,7 @@ th,td {
 }
 
 tr:hover td {
-    background: #f1f6ff
+    background: #f1f6ff;
 }
 
 @media (max-width: 900px) {
