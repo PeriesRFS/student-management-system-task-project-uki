@@ -1,5 +1,5 @@
 #Import Libraries
-from fastapi import FastAPI, HTTPException,status
+from fastapi import FastAPI, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, EmailStr, Field
 from typing import List
@@ -66,7 +66,7 @@ def add_student(student: StudentCreate):
     return student_dict
 
 #List All Students
-@app.get("/students/", response_model=list[StudentOut])
+@app.get("/students/", response_model=List[StudentOut])
 def list_students():
     return students
 
