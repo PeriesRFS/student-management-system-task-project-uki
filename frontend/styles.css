@@ -4,7 +4,7 @@
 }
 
 body{
-    background-color: azure;
+    background-color: white;
     margin: 0;
     padding: 0;
 }
@@ -15,7 +15,7 @@ body{
     padding: 20px;
 }
 
-h1,h1 {
+h1,h2 {
     text-align: center;
 }
 
@@ -34,14 +34,15 @@ input {
 
 button {
     padding: 10px 20px;
-    background: darkblue;
+    background:royalblue ;
     color: white;
-    border: none;
+    border: none ;
     cursor: pointer;
+  
 }
 
 button:hover {
-    background: navy;
+    background:cadetblue ;
 }
 
 table {
@@ -51,6 +52,8 @@ table {
 
 th, td {
     border: 1px solid #ddd ;
+    padding: 10px;
+    text-align: center;
 }
 
 @media (max-width: 600px) {

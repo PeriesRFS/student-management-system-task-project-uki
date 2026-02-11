@@ -1,11 +1,22 @@
 #Import Libraries
 from fastapi import FastAPI, HTTPException,status
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, EmailStr, Field
 from typing import List
 from threading import Lock
 
 #initialize FASTAPI app
 app = FastAPI(title = "Student Management API", version ="1.0.0")
+
+
+# Configure CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allow all origins (dev only)
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)   
 
 # In-memory storage for students
 students = [] # List to store student

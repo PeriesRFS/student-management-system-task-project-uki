@@ -1,4 +1,4 @@
-const API_URL = "";
+const API_URL = "http://127.0.0.1:8000/students/";
 const form = document.getElementById("studentForm");
 const tableBody = document.getElementById("studentTable");
 
@@ -51,7 +51,15 @@ form.addEventListener("submit", function (e) {
     .then((res) => {
       if (!res.ok) throw new Error("Failled to add student");
       return res.json();
-    });
+    })
+
+    // After successful addition
+    .then(() => {
+        form.reset(); //clear the fields
+        fetchStudents(); //reload student list from server
+    })
+
+    .catch(err => alert(err.message));
 });
 
 //Delete Students using their id
@@ -59,7 +67,7 @@ function deletStudents(id) {
 
   //send the delete request to api with student id
   fetch(API_URL + id, { method: "DELETE" })
-  
+
     //check if the delete was sucessful
     .then((res) => {
       if (!res.ok) throw new Error("Delete failed");
