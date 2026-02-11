@@ -26,3 +26,16 @@ def root():
     return {"message":"API is Running"}
 
 #Create A New Student 
+@app.post("/students/", response_model = StudentOut, status_code = status.HTTP_201_CREATED)
+def add_student(student: StudentCreate):
+    return 
+
+#List All Students
+@app.get("/students/", response_model=list[StudentOut])
+def list_students():
+    return #students list
+
+#Delete a student by id
+@app.delete("/students/{student_id}",response_model=StudentOut)
+def delete_student(student_id: int):
+    return
