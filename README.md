@@ -70,8 +70,8 @@ You can see the **live application** here: [Deployed Site](https://studentcourse
 ---
 ### 1. Clone the Repository
 ```bash
-git clone <YOUR_GITHUB_REPO_LINK>
-cd STUDENT-MANAGEMENT-SYSTEM-TASK-UKI
+git clone <https://github.com/PeriesRFS?tab=repositories>
+cd student-management-system-task-project-uki
 ```
 ### 2. Backend Setup (TASK-2)
 1.Navigate to the backend folder
@@ -104,7 +104,7 @@ const API_URL = "http://127.0.0.1:8000/students/";
 ```
 ### 4. Python Marks Analysis Script (TASK-1)
 
-1.Navigate to the backend folder:
+1.Navigate to the backend folder:(if you are not in the backend folder directory
 ```bash
 cd backend
 ```
